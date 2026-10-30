@@ -1,0 +1,95 @@
+{
+  "seed": 2026,
+  "simulation_counts": [
+    1000,
+    5000
+  ],
+  "scenarios": [
+    {
+      "name": "priority_change_10pct",
+      "inputs": {
+        "competing_orders": {
+          "distribution": "normal",
+          "mean": 12,
+          "std_dev": 6,
+          "min": 2
+        },
+        "required_quantity": {
+          "distribution": "lognormal",
+          "mu": 3.912,
+          "sigma": 1.277,
+          "min": 1
+        },
+        "stock_coverage": {
+          "distribution": "triangular",
+          "min": 0.85,
+          "mode": 0.95,
+          "max": 1.0
+        },
+        "initial_slack": {
+          "distribution": "normal",
+          "mean": 17,
+          "std_dev": 10,
+          "min": 4
+        },
+        "priority_change_probability": {
+          "distribution": "bernoulli",
+          "probability": 0.1
+        },
+        "urgent_slack": {
+          "distribution": "uniform",
+          "min": 0,
+          "max": 3
+        },
+        "replenishment_wait": {
+          "distribution": "lognormal",
+          "mu": 2.398,
+          "sigma": 0.964
+        }
+      }
+    },
+    {
+      "name": "priority_change_30pct",
+      "inputs": {
+        "competing_orders": {
+          "distribution": "normal",
+          "mean": 12,
+          "std_dev": 6,
+          "min": 2
+        },
+        "required_quantity": {
+          "distribution": "lognormal",
+          "mu": 3.912,
+          "sigma": 1.277,
+          "min": 1
+        },
+        "stock_coverage": {
+          "distribution": "triangular",
+          "min": 0.85,
+          "mode": 0.95,
+          "max": 1.0
+        },
+        "initial_slack": {
+          "distribution": "normal",
+          "mean": 17,
+          "std_dev": 10,
+          "min": 4
+        },
+        "priority_change_probability": {
+          "distribution": "bernoulli",
+          "probability": 0.3
+        },
+        "urgent_slack": {
+          "distribution": "uniform",
+          "min": 0,
+          "max": 3
+        },
+        "replenishment_wait": {
+          "distribution": "lognormal",
+          "mu": 2.398,
+          "sigma": 0.964
+        }
+      }
+    }
+  ]
+}
